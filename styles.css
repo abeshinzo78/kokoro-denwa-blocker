@@ -1,0 +1,6 @@
+/* 心のでんわブロッカー - 相談窓口非表示用スタイル */
+
+/* JS から付与される非表示クラス（display: none !important で確実に隠蔽） */
+.kokoro-blocked {
+  display: none !important;
+}

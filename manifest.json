@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "心のでんわブロッカー",
+  "version": "1.0.1",
+  "description": "Google検索結果から「相談窓口」を非表示にします",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "kokoro-denwa-blocker@example.com",
+      "strict_min_version": "115.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/search*",
+        "*://www.google.co.jp/search*",
+        "*://www.google.com/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://www.google.co.jp/*"
+  ]
+}
